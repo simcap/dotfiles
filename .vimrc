@@ -11,5 +11,8 @@ set ignorecase
 set shiftwidth=2
 set guifont=Monaco:h14
 
+" For lustyexplorer
+set hidden
+
 " Possible color schemes: slate, delek, zellner
 colorscheme delek
