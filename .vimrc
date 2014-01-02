@@ -9,3 +9,6 @@ set tabstop=4
 set ignorecase
 set shiftwidth=2
 set guifont=Monaco:h14
+
+" Possible color schemes: slate, delek, zellner
+colorscheme delek
