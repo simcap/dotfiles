@@ -18,7 +18,8 @@ set smarttab
 set shiftwidth=2
 set softtabstop=2
 
-set guifont=Monaco:h14
+" Remove toolbar in gvim
+set guioptions-=T
 
 " nnoremap <f5> :!ctags -R --languages=+Ruby --exclude=.git -f tags
 
@@ -27,3 +28,11 @@ set hidden
 
 " Possible color schemes: slate, delek, zellner
 colorscheme github
+
+if has("gui_running")
+  if has("gui_macvim")
+    set guifont=Monaco:h16
+  else
+    set guifont=DejaVu\ Sans\ Mono\ 16
+  endif
+endif
