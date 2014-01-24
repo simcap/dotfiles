@@ -1,16 +1,30 @@
 set nocompatible
 filetype plugin indent on
 
+runtime macros/matchit.vim
+
 execute pathogen#infect()
 execute pathogen#helptags()
 
 syntax on
+set t_Co=256
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" Auto sizing of focus window
+set winwidth=84
+set winheight=5
+set winminheight=5
+set winheight=999
 
 set number
 set statusline=%t\ %m
 set incsearch
 set hlsearch
-set ignorecase
+set smartcase
 
 set autoindent
 set expandtab
