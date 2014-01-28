@@ -17,6 +17,9 @@ noremap <Right> <NOP>
 let mapleader = ","
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
+set backupdir=~/tmp
+set directory=~/tmp " Don't clutter dirs up with swp and tmp files
+
 " Auto sizing of focus window
 set winwidth=84
 set winheight=5
