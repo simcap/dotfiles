@@ -1,4 +1,6 @@
 set nocompatible
+set ruler
+
 filetype plugin indent on
 
 runtime macros/matchit.vim
