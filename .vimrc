@@ -17,7 +17,6 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 let mapleader = ","
-vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
 set backupdir=~/tmp
 set directory=~/tmp " Don't clutter dirs up with swp and tmp files
@@ -29,7 +28,10 @@ set winminheight=5
 set winheight=999
 
 set number
-set statusline=%t\ %m
+set laststatus=2
+set noruler
+set statusline=%f\ %m\ 
+set statusline+=%=%{fugitive#statusline()}
 set incsearch
 set hlsearch
 set smartcase
@@ -44,9 +46,6 @@ set softtabstop=2
 set guioptions-=T
 
 " nnoremap <f5> :!ctags -R --languages=+Ruby --exclude=.git -f tags
-
-" For lustyexplorer
-set hidden
 
 " Possible color schemes: slate, delek, zellner
 colorscheme github
