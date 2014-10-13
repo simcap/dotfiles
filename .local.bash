@@ -8,3 +8,6 @@ function ruby_version() {
 chruby ruby-2.1.0
 
 source ~/.git-bash-prompt.sh
+
+# Aliases
+alias fox='firefox > /dev/null 2>&1 &'
